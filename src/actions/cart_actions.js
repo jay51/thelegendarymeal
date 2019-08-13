@@ -1,0 +1,19 @@
+import {
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  SUB_QUANTITY, 
+  ADD_QUANTITY, 
+  ADD_SHIPPING
+} from "./action_types";
+
+export const addToCart = id => {return {type: ADD_TO_CART, id};}
+export const removeItem = id => {return {type: REMOVE_FROM_CART, id};}
+export const subtractQuantity = id =>  {return {type: SUB_QUANTITY, id};}
+export const addQuantity= id => {return {type: ADD_QUANTITY, id};}
+
+/*
+export  addToCart = id =>  {type: ADD_TO_CART, id};
+export const removeItem = id =>  {type: REMOVE_FROM_CART, id};
+export const subtractQuantity = id => {type: SUB_QUANTITY,id};
+export const addQuantity = id => {type: ADD_QUANTITY,id};
+*/

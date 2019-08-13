@@ -1,50 +1,24 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
-
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
-  }
-
-  handleClick = api => e => {
-    e.preventDefault()
-
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
-
-  render() {
-    const { loading, msg } = this.state
-
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
-}
+import React, { Component } from "react";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Cart from "./components/Cart";
+import Shop from "./components/Shop";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
+      <BrowserRouter>
+        <Navbar/>
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={() => <> what the fuck! what the fuck!</>}/>
+            <Route exact path="/shop" component={Shop}/>
+            <Route path="/cart" component={Cart}/>
+            <Route component={()=> <>what the fuck are you looking for ? </>}/>
+          </Switch>
+        </div>
+      </BrowserRouter>
     )
   }
 }
-
 export default App
