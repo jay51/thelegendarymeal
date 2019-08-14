@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-//import { addShipping } from "./actions/cartActions"
+import { addShipping, subShipping} from "../actions/cart_actions"
+import {Elements} from 'react-stripe-elements';
+import CheckoutForm from './CheckoutForm';
+
 
 class Recipe extends Component{
     
@@ -11,31 +14,39 @@ class Recipe extends Component{
 
     handleChecked = (e)=>{
         if(e.target.checked){
-            this.props.addShipping();
-        }
-        else{
-            this.props.substractShipping();
+          this.props.addShipping();
+        } else {
+          this.props.substractShipping();
         }
     }
 
     render(){
   
         return(
-            <div className="container">
-                <div className="collection">
-                    <li className="collection-item">
-                            <label>
-                                <input type="checkbox" ref="shipping" onChange= {this.handleChecked} />
-                                <span>Shipping(+6$)</span>
-                            </label>
-                        </li>
-                        <li className="collection-item"><b>Total: {this.props.total} $</b></li>
-                    </div>
-                    <div className="checkout">
-                        <button className="waves-effect waves-light btn">Checkout</button>
-                    </div>
-                 </div>
-        )
+          <div>
+            <div className="mb-2">Add Delivery +6$</div>
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <div className="input-group-text">
+                  <input type="checkbox" 
+                    aria-label="Checkbox for delivery"
+                    ref="shipping" onChange= {this.handleChecked}
+                  />
+                </div>
+              </div>
+              <input type="text" className="form-control" placeholder="Address" aria-label="delivery address"/>
+            </div>
+            <div className=""><b>Total: {this.props.total} $</b></div>
+
+            <div className="form-check">
+              <hr/>
+                <Elements>
+                  <CheckoutForm/>
+                </Elements>
+                <button className="btn btn-success">Checkout</button>
+            </div>
+          </div>
+        );
     }
 }
 
@@ -48,8 +59,8 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = (dispatch)=>{
     return{
-        addShipping: ()=>{dispatch({type: "ADD_SHIPPING"})},
-        substractShipping: ()=>{dispatch({type: "SUB_SHIPPING"})}
+        addShipping: ()=>{dispatch(addShipping())},
+        substractShipping: ()=>{dispatch(subShipping())}
     }
 }
 

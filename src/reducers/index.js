@@ -1,4 +1,11 @@
-import { ADD_TO_CART,REMOVE_FROM_CART,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from "../actions/action_types";
+import { 
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  SUB_QUANTITY,
+  ADD_QUANTITY,
+  ADD_SHIPPING,
+  SUB_SHIPPING
+} from "../actions/action_types";
 import {initState} from "./store";
 
 
@@ -55,13 +62,16 @@ const cartReducer = (state = initState,action) =>{
     }
 
     if(action.type === ADD_SHIPPING){
+      console.log("add")
       return{...state, total: state.total + 6}
     }
 
-    if(action.type === "SUB_SHIPPING"){
+    if(action.type === SUB_SHIPPING){
+      console.log("sub")
       return{...state, total: state.total - 6}
-    } else{
-      return state
-    }
+    } 
+
+    return state
+
 }
 export default cartReducer

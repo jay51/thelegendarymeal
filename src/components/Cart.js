@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
-import { removeItem,addQuantity,subtractQuantity} from "../actions/cart_actions"
+import { removeItem, addQuantity, subtractQuantity} from "../actions/cart_actions"
+
 import Recipe from "./Recipe"
 
 class Cart extends Component{
@@ -14,7 +15,6 @@ class Cart extends Component{
     handleSubtractQuantity = (id)=> this.props.subtractQuantity(id);
 
     render(){
-      console.log(this.props.items);
       let addedItems = this.props.items.length ?
       (  
         this.props.items.map(item =>
@@ -27,8 +27,8 @@ class Cart extends Component{
               <div className="col-md-8">
                 <div className="card-body">
                   <h5 className="card-title">{item.title}</h5>
-                  <p className="card-text">PRICE: {item.price}$</p>
-                  <p className="card-text">QUANTITY: {item.quantity}</p>
+                  <p className="card-text mb-0">PRICE: {item.price}$</p>
+                  <p className="card-text mt-0">QUANTITY: {item.quantity}</p>
                   <p className="card-text">{item.desc}</p>
                   <div className="add-remove">
                     <button className="btn btn-dark mr-2" onClick={()=>{this.handleAddQuantity(item.id)}}>ADD</button>
@@ -51,8 +51,9 @@ class Cart extends Component{
         <h5 className="mt-3">YOUR ITEMS:</h5>
         <hr/>
         {addedItems}
+        <hr/>
         <Recipe />
-        What the fuck!
+        Display a notification when a user add something to the cart
         {
           this.props.items.map(item => <div key={item.id}>{item.quantity}</div>)
         }
