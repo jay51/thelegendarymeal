@@ -43,7 +43,6 @@ class Recipe extends Component{
                 <Elements>
                   <CheckoutForm/>
                 </Elements>
-                <button className="btn btn-success">Checkout</button>
             </div>
           </div>
         );

@@ -24,12 +24,12 @@ const cartReducer = (state = initState,action) =>{
           addedItem.quantity = 1;
           let newTotal = state.total + addedItem.price;
           //TODO: We need to return a new array otherwise component wont rerender
+          // and fix the order in which the items render
           return{...state, addedItems: [...state.addedItems, addedItem], total : newTotal};
       }
     }
     
     if(action.type === REMOVE_FROM_CART){
-      // This Remove item form cart completely!
       let itemToRemove= state.addedItems.find(item=> action.id === item.id)
       let new_items = state.addedItems.filter(item=> action.id !== item.id)
       let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity )
@@ -48,10 +48,8 @@ const cartReducer = (state = initState,action) =>{
     if(action.type=== SUB_QUANTITY){  
       let addedItem = state.items.find(item=> item.id === action.id);
       let new_items = state.addedItems.filter(item=>item.id !== action.id);
-      //TODO: Change this from quantity === 1 to < 1 because people can play with the code and break it
-      //if the qt == 0 then it should be removed
-      if(addedItem.quantity === 1){
-        //let new_items = state.addedItems.filter(item=>item.id !== action.id);
+
+      if(addedItem.quantity <= 1){
         let newTotal = state.total - addedItem.price;
         return{...state, addedItems: new_items, total: newTotal};
       } else {

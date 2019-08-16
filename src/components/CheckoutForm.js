@@ -8,15 +8,19 @@ class CheckoutForm extends Component {
     this.submit = this.submit.bind(this);
   }
   async submit(e) {
-    // User clicked submit
     e.preventDefault();
-    console.log("form submit");
     let {token} = await this.props.stripe.createToken({name: "Name"});
+    console.log(token.id)
+    //TODO:Make sure we have a token before send request
+    //TODO:Add the delivery address to post request
     let response = await fetch("/.netlify/functions/payment", {
         method: "POST",
         headers: {"Content-Type": "text/plain"},
         body: JSON.stringify({token: token.id})
       });
+    let data = await response.json();
+    console.log(data);
+
 
     if (response.ok){
       console.log("Purchase Complete!")
@@ -27,10 +31,10 @@ class CheckoutForm extends Component {
   render() {
     if (this.state.complete) return <h1>Purchase Complete</h1>;
     return (
-          <div className="checkout">
-            <p>Would you like to complete the purchase?</p>
+          <div className="checkout mt-4 mb-5">
+            <p className="mb-4">COMPLETE YOUR PURCHASE</p>
             <CardElement />
-            <button onClick={this.submit}>Send</button>
+            <button className="mt-4 btn btn-success" onClick={this.submit}>Checkout</button>
           </div>
         );
   }

@@ -53,10 +53,6 @@ class Cart extends Component{
         {addedItems}
         <hr/>
         <Recipe />
-        Display a notification when a user add something to the cart
-        {
-          this.props.items.map(item => <div key={item.id}>{item.quantity}</div>)
-        }
       </div>
     );
   }
