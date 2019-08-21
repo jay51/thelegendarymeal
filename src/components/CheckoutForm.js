@@ -13,19 +13,23 @@ class CheckoutForm extends Component {
     console.log(token.id)
     //TODO:Make sure we have a token before send request
     //TODO:Add the delivery address to post request
-    let response = await fetch("/.netlify/functions/payment", {
-        method: "POST",
-        headers: {"Content-Type": "text/plain"},
-        body: JSON.stringify({token: token.id})
-      });
-    let data = await response.json();
-    console.log(data);
+    try{
+      let response = await fetch("/.netlify/functions/payment", {
+          method: "POST",
+          headers: {"Content-Type": "text/plain"},
+          body: JSON.stringify({token: token.id})
+        });
+      let data = await response.json();
+      console.log(data);
 
+      if (response.ok){
+        console.log("Purchase Complete!")
+        this.setState({complete: true});
+      } 
+    } catch (e){
+      console.log(e);
+    }
 
-    if (response.ok){
-      console.log("Purchase Complete!")
-      this.setState({complete: true});
-    } 
   }
 
   render() {
