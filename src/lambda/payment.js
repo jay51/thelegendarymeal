@@ -10,9 +10,8 @@ const products = [];
 
 export function handler(event, context, callback) {
 	console.log(event.body);
-  //console.log(JSON.parse(event.body))
-  let json = JSON.parse(event.body);
 
+  /*
 	let amount = 1000;
   stripe.charges.create({
     amount,
@@ -20,11 +19,12 @@ export function handler(event, context, callback) {
     currency: "usd",
     source: json.token
   });
+  */
 
-  return {
+  callback(null, {
     statusCode: 200,
-    body:JSON.stringify({stat:"worked"})
-  };
+    body:JSON.stringify({stat:"worked", charge:"charge was made"})
+  });
 
 }
 
@@ -33,18 +33,7 @@ callback(null, {
   statusCode: 200,
   body:JSON.stringify({stat:"worked", charge:"charge was made"})
 });
-OR
-return {
-  statusCode: 200,
-  body: "Hello, World"
-};
- */
 
-/*
-callback(null, {
-  statusCode: 200,
-  body:JSON.stringify({stat:"worked", charge:"charge was made"})
-});
 
 let amount = 1000;
 stripe.customers.create({
