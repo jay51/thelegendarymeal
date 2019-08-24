@@ -9,22 +9,38 @@ const HEADERS = {
 const products = [];
 
 export function handler(event, context, callback) {
-	console.log(event.body);
+    console.log(event.body);
 
-  /*
-	let amount = 1000;
-  stripe.charges.create({
-    amount,
-    description: "What the fuck",
-    currency: "usd",
-    source: json.token
-  });
-  */
 
-  callback(null, {
-    statusCode: 200,
-    body:JSON.stringify({stat:"worked", charge:"charge was made"})
-  });
+
+    try {
+        let json = Json.parse(event.body);
+
+
+
+
+    /*
+    let amount = 1000;
+    stripe.charges.create({
+        amount,
+        description: "What the fuck",
+        currency: "usd",
+        source: json.token
+    });
+    */
+
+
+        callback(null, {
+            statusCode: 200,
+            body:JSON.stringify({status: "secusses", error: null})
+        });
+
+    } catch(e) {
+        callback(null, {
+            statusCode: 200,
+            body:JSON.stringify({status: "failure", error: "invalid json object"})
+        });
+    }     
 
 }
 
