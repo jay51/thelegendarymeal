@@ -1,47 +1,32 @@
 const stripe = require("stripe")("sk_test_R3xTlYAL3e77UMVi69WZD6CV00NeHku9IJ");
 
-const HEADERS = {
-	  "Access-Control-Allow-Origin": "*",
-	  "Access-Control-Allow-Headers": "Content-Type"
-};
-
 //const { stripe_sk, email, password} = process.env;
 const products = [];
 
 export function handler(event, context, callback) {
-    console.log(event.body);
+  console.log(event.body);
 
+  try {
+    let json = JSON.parse(event.body);
 
-
-    try {
-        let json = Json.parse(event.body);
-
-
-
-
-    /*
     let amount = 1000;
     stripe.charges.create({
-        amount,
-        description: "What the fuck",
-        currency: "usd",
-        source: json.token
+      amount,
+      description: "We're back and working",
+      currency: "usd",
+      source: json.token
     });
-    */
 
-
-        callback(null, {
-            statusCode: 200,
-            body:JSON.stringify({status: "secusses", error: null})
-        });
-
-    } catch(e) {
-        callback(null, {
-            statusCode: 200,
-            body:JSON.stringify({status: "failure", error: "invalid json object"})
-        });
-    }     
-
+    callback(null, {
+      statusCode: 200,
+      body: JSON.stringify({ status: "secusses", error: null })
+    });
+  } catch (e) {
+    callback(null, {
+      statusCode: 200,
+      body: JSON.stringify({ status: "failure", error: "invalid json object" })
+    });
+  }
 }
 
 /*
