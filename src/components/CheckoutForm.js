@@ -7,8 +7,11 @@ class CheckoutForm extends Component {
     this.state = { complete: false };
     this.submit = this.submit.bind(this);
   }
+
   async submit(e) {
     e.preventDefault();
+    const { fName, Lname, email, phone } = this.props.formData;
+
     let { token } = await this.props.stripe.createToken({ name: "Name" });
     console.log(token.id);
     //TODO:Make sure we have a token before send request
