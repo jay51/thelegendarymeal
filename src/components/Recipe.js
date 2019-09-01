@@ -7,7 +7,6 @@ import CheckoutForm from "./CheckoutForm";
 class Recipe extends Component {
   state = {
     disabled: true,
-
     fName: "",
     lName: "",
     email: "",
@@ -117,7 +116,7 @@ class Recipe extends Component {
         <div className="form-check">
           <hr />
           <Elements>
-            <CheckoutForm formData={this.state} />
+            <CheckoutForm userData={this.state} />
           </Elements>
         </div>
       </form>

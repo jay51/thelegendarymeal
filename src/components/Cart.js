@@ -65,10 +65,10 @@ class Cart extends Component {
         </div>
       ))
     ) : (
-      <div className="mt-5 mb-5">
-        <Link to="/shop">YOUR CART IS EMPHTY. ADD MORE ITEMS? </Link>
-      </div>
-    );
+        <div className="mt-5 mb-5">
+          <Link to="/shop">YOUR CART IS EMPHTY. ADD MORE ITEMS? </Link>
+        </div>
+      );
     return (
       <div>
         <h5 className="mt-3">YOUR ITEMS:</h5>
@@ -86,6 +86,7 @@ const mapStateToProps = state => {
     items: state.addedItems
   };
 };
+
 const mapDispatchToProps = dispatch => {
   return {
     removeItem: id => {
@@ -99,6 +100,7 @@ const mapDispatchToProps = dispatch => {
     }
   };
 };
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps

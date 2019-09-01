@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { CardElement, injectStripe } from "react-stripe-elements";
+import { connect } from "react-redux";
 
 class CheckoutForm extends Component {
   constructor(props) {
@@ -10,31 +11,30 @@ class CheckoutForm extends Component {
 
   async submit(e) {
     e.preventDefault();
-    const { fName, Lname, email, phone } = this.props.formData;
 
-    let { token } = await this.props.stripe.createToken({ name: "Name" });
-    console.log(token.id);
+    const userData = this.props.userData
+    const items = this.props.items.map(item => ({ id: item.id, title: item.title }));
+    // console.log(items)
+
     //TODO:Make sure we have a token before send request
-    //TODO:Add the delivery address to post request
-    console.log(JSON.stringify({ token: token.id }));
+    let { token } = await this.props.stripe.createToken({ name: userData.fName });
+    console.log(token);
 
     try {
       let response = await fetch("/.netlify/functions/payment", {
         method: "POST",
         headers: { "Content-Type": "text/plain" },
-        body: JSON.stringify({ token: token.id })
+        body: JSON.stringify({ token: token.id, items, userData })
       });
 
       let data = await response.json();
       console.log(data);
-
-      console.log(response);
       if (response.ok) {
-        console.log("Purchase Complete!");
         this.setState({ complete: true });
       }
     } catch (e) {
-      console.log(e);
+      console.log("INVALID CARD NUMBER")
+      console.log("GOT Error:", e);
     }
   }
 
@@ -52,4 +52,11 @@ class CheckoutForm extends Component {
   }
 }
 
-export default injectStripe(CheckoutForm);
+
+const mapStateToProps = state => {
+  return {
+    items: state.addedItems
+  };
+};
+
+export default connect(mapStateToProps)(injectStripe(CheckoutForm));

@@ -50,17 +50,18 @@ export function handler(event, context, callback) {
   console.log(event.body);
 
   try {
-    let { items, token } = JSON.parse(event.body);
+    let { items, token, userData } = JSON.parse(event.body);
 
     let itemsToBuy = items.filter(item => {
       return item.id === products.find(prod => prod.id === item.id).id;
     });
 
+    // TODO: find the price for the items
     let amount = 1000;
     stripe.charges
       .create({
         amount,
-        description: "We're back and working",
+        description: userData.fName + ": " + userData.email + ": " + userData.phone,
         currency: "usd",
         source: token
       })
@@ -74,19 +75,13 @@ export function handler(event, context, callback) {
     });
   } catch (e) {
     callback(null, {
-      statusCode: 200,
+      statusCode: 500,
       body: JSON.stringify({ status: "failure", error: "invalid json object" })
     });
   }
 }
 
 /*
-callback(null, {
-  statusCode: 200,
-  body:JSON.stringify({stat:"worked", charge:"charge was made"})
-});
-
-
 let amount = 1000;
 stripe.customers.create({
   email: "example@gmail.com",//event.body.stripeEmail,
