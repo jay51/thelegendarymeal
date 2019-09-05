@@ -80,33 +80,3 @@ export function handler(event, context, callback) {
     });
   }
 }
-
-/*
-let amount = 1000;
-stripe.customers.create({
-  email: "example@gmail.com",//event.body.stripeEmail,
-  source: token
-})
-.then(customer =>
-  stripe.charges.create({
-  amount,
-  description: "Sample Charge",
-  currency: "usd",
-  customer: customer.id
-}))
-.then(charge => {
-  callback(null, {
-    statusCode: 200,
-    HEADERS,
-    body: "it's working"
-  });
-
-})
-.catch(err => {
-  callback(null, {
-    statusCode: 200,
-    body: "ERROR: " + `<p> ${event.body} </p> <br>` +
-    JSON.stringify(err)
-  });
-});
-*/
