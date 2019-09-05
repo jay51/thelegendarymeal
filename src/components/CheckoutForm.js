@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { CardElement, injectStripe } from "react-stripe-elements";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom"
 
 class CheckoutForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { complete: false };
+    this.state = { complete: false, success: false };
     this.submit = this.submit.bind(this);
+    this.redirct = this.redirct.bind(this);
   }
 
   async submit(e) {
@@ -29,17 +31,27 @@ class CheckoutForm extends Component {
 
       let data = await response.json();
       console.log(data);
-      if (response.ok) {
-        this.setState({ complete: true });
-      }
+
+      if (response.ok) { this.setState({ complete: true, success: true }); }
+      else { this.setState({ complete: true }) }
+
     } catch (e) {
       console.log("INVALID CARD NUMBER")
       console.log("GOT Error:", e);
     }
   }
 
+
   render() {
-    if (this.state.complete) return <h1>Purchase Complete</h1>;
+    if (this.state.complete) {
+      if (this.state.success) {
+        // return <div> PURCHASE COMPLETE </div>
+        return <Redirect to="/shop" />
+      }
+    }
+
+
+
     return (
       <div className="checkout mt-4 mb-5">
         <p className="mb-4">COMPLETE YOUR PURCHASE</p>
@@ -47,6 +59,7 @@ class CheckoutForm extends Component {
         <button className="mt-4 btn btn-success" onClick={this.submit}>
           Checkout
         </button>
+        {this.state.complete && !this.state.success ? <div>something went wrong </div> : ""}
       </div>
     );
   }
