@@ -8,7 +8,6 @@ class CheckoutForm extends Component {
     super(props);
     this.state = { complete: false, success: false };
     this.submit = this.submit.bind(this);
-    this.redirct = this.redirct.bind(this);
   }
 
   async submit(e) {
@@ -16,8 +15,6 @@ class CheckoutForm extends Component {
 
     const userData = this.props.userData
     const items = this.props.items.map(item => ({ id: item.id, title: item.title }));
-    // console.log(items)
-
     //TODO:Make sure we have a token before send request
     let { token } = await this.props.stripe.createToken({ name: userData.fName });
     console.log(token);
