@@ -177,7 +177,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("./images/background.jpg");
+  background-image: url("./images/homepage/background.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -593,7 +593,7 @@ header.masthead .intro-text .intro-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("./images/map-image.png");
+  background-image: url("./images/homepage/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }

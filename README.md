@@ -115,3 +115,4 @@ For a full demo of routing and authentication, check this branch: https://github
 - [ ] Fix netlify routing 
 - [ ] Upload keys
 - [ ] Optimize images
+- [ ] Create lambda function to handle contact form or use netlify contact form

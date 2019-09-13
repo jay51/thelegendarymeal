@@ -1,13 +1,9 @@
 import React from "react";
-
+import Img1 from "../images/homepage/item1.jpg";
 
 export default class Home extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-  }
-
+  constructor(props) { super(props); }
 
   render() {
 
@@ -22,8 +18,6 @@ export default class Home extends React.Component {
             </div>
           </div>
         </header>
-
-
 
         <section class="bg-light page-section" id="portfolio">
           <div class="container">
@@ -41,7 +35,7 @@ export default class Home extends React.Component {
                       <i class="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="" />
+                  <img class="img-fluid" src={Img1} alt="" />
                 </a>
                 <div class="portfolio-caption">
                   <h4>Threads</h4>
@@ -55,7 +49,7 @@ export default class Home extends React.Component {
                       <i class="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="" />
+                  <img class="img-fluid" src={Img1} alt="" />
                 </a>
                 <div class="portfolio-caption">
                   <h4>Explore</h4>
@@ -69,7 +63,7 @@ export default class Home extends React.Component {
                       <i class="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="" />
+                  <img class="img-fluid" src={Img1} alt="" />
                 </a>
                 <div class="portfolio-caption">
                   <h4>Finish</h4>
@@ -83,7 +77,7 @@ export default class Home extends React.Component {
                       <i class="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="" />
+                  <img class="img-fluid" src={Img1} alt="" />
                 </a>
                 <div class="portfolio-caption">
                   <h4>Lines</h4>
@@ -97,7 +91,7 @@ export default class Home extends React.Component {
                       <i class="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="" />
+                  <img class="img-fluid" src={Img1} alt="" />
                 </a>
                 <div class="portfolio-caption">
                   <h4>Southwest</h4>
@@ -111,7 +105,7 @@ export default class Home extends React.Component {
                       <i class="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="" />
+                  <img class="img-fluid" src={Img1} alt="" />
                 </a>
                 <div class="portfolio-caption">
                   <h4>Window</h4>
@@ -181,6 +175,7 @@ export default class Home extends React.Component {
                 <ul class="list-inline social-buttons">
                   <li class="list-inline-item">
                     <a href="#">
+                      {/* I need link to facebook page and facebook icon  */}
                       <i class="fab fa-twitter"></i>
                     </a>
                   </li>
@@ -210,8 +205,7 @@ export default class Home extends React.Component {
           </div>
         </footer>
 
-        {/* <!-- Portfolio Modals --> */}
-
+        {/* When you click on an image this will load */}
         {/* <!-- Modal 1 --> */}
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog">
@@ -226,9 +220,11 @@ export default class Home extends React.Component {
                   <div class="col-lg-8 mx-auto">
                     <div class="modal-body">
                       {/* <!-- Project Details Go Here --> */}
-                      <h2 class="text-uppercase">Project Name</h2>
-                      <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="" />
+                      <h2 class="text-uppercase">Food Name</h2>
+                      <p class="item-intro text-muted">
+                        Lorem ipsum dolor sit amet consectetur.
+                      </p>
+                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                       <ul class="list-inline">
                         <li>Date: January 2017</li>
@@ -262,7 +258,7 @@ export default class Home extends React.Component {
                       {/* <!-- Project Details Go Here --> */}
                       <h2 class="text-uppercase">Project Name</h2>
                       <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="" />
+                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                       <ul class="list-inline">
                         <li>Date: January 2017</li>
@@ -296,7 +292,7 @@ export default class Home extends React.Component {
                       {/* <!-- Project Details Go Here --> */}
                       <h2 class="text-uppercase">Project Name</h2>
                       <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="" />
+                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                       <ul class="list-inline">
                         <li>Date: January 2017</li>
@@ -330,7 +326,7 @@ export default class Home extends React.Component {
                       {/* <!-- Project Details Go Here --> */}
                       <h2 class="text-uppercase">Project Name</h2>
                       <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="" />
+                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                       <ul class="list-inline">
                         <li>Date: January 2017</li>
@@ -364,7 +360,7 @@ export default class Home extends React.Component {
                       {/* <!-- Project Details Go Here --> */}
                       <h2 class="text-uppercase">Project Name</h2>
                       <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="" />
+                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                       <ul class="list-inline">
                         <li>Date: January 2017</li>
@@ -397,7 +393,7 @@ export default class Home extends React.Component {
                       {/* <!-- Project Details Go Here --> */}
                       <h2 class="text-uppercase">Project Name</h2>
                       <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="" />
+                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                       <ul class="list-inline">
                         <li>Date: January 2017</li>
