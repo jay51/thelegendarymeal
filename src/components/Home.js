@@ -9,107 +9,107 @@ export default class Home extends React.Component {
 
     return (
       <>
-        <header class="masthead">
-          <div class="container">
-            <div class="intro-text">
-              <div class="intro-lead-in">Welcome To Our Studio!</div>
-              <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+        <header className="masthead">
+          <div className="container">
+            <div className="intro-text">
+              <div className="intro-lead-in">Welcome To Our Studio!</div>
+              <div className="intro-heading text-uppercase">It's Nice To Meet You</div>
+              <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
             </div>
           </div>
         </header>
 
-        <section class="bg-light page-section" id="portfolio">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Portfolio</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        <section className="bg-light page-section" id="portfolio">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12 text-center">
+                <h2 className="section-heading text-uppercase">Portfolio</h2>
+                <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <i class="fas fa-plus fa-3x"></i>
+            <div className="row">
+              <div className="col-md-4 col-sm-6 portfolio-item">
+                <a className="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                  <div className="portfolio-hover">
+                    <div className="portfolio-hover-content">
+                      <i className="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src={Img1} alt="" />
+                  <img className="img-fluid" src={Img1} alt="" />
                 </a>
-                <div class="portfolio-caption">
+                <div className="portfolio-caption">
                   <h4>Threads</h4>
-                  <p class="text-muted">Illustration</p>
+                  <p className="text-muted">Illustration</p>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <i class="fas fa-plus fa-3x"></i>
+              <div className="col-md-4 col-sm-6 portfolio-item">
+                <a className="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                  <div className="portfolio-hover">
+                    <div className="portfolio-hover-content">
+                      <i className="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src={Img1} alt="" />
+                  <img className="img-fluid" src={Img1} alt="" />
                 </a>
-                <div class="portfolio-caption">
+                <div className="portfolio-caption">
                   <h4>Explore</h4>
-                  <p class="text-muted">Graphic Design</p>
+                  <p className="text-muted">Graphic Design</p>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <i class="fas fa-plus fa-3x"></i>
+              <div className="col-md-4 col-sm-6 portfolio-item">
+                <a className="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                  <div className="portfolio-hover">
+                    <div className="portfolio-hover-content">
+                      <i className="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src={Img1} alt="" />
+                  <img className="img-fluid" src={Img1} alt="" />
                 </a>
-                <div class="portfolio-caption">
+                <div className="portfolio-caption">
                   <h4>Finish</h4>
-                  <p class="text-muted">Identity</p>
+                  <p className="text-muted">Identity</p>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <i class="fas fa-plus fa-3x"></i>
+              <div className="col-md-4 col-sm-6 portfolio-item">
+                <a className="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                  <div className="portfolio-hover">
+                    <div className="portfolio-hover-content">
+                      <i className="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src={Img1} alt="" />
+                  <img className="img-fluid" src={Img1} alt="" />
                 </a>
-                <div class="portfolio-caption">
+                <div className="portfolio-caption">
                   <h4>Lines</h4>
-                  <p class="text-muted">Branding</p>
+                  <p className="text-muted">Branding</p>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <i class="fas fa-plus fa-3x"></i>
+              <div className="col-md-4 col-sm-6 portfolio-item">
+                <a className="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                  <div className="portfolio-hover">
+                    <div className="portfolio-hover-content">
+                      <i className="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src={Img1} alt="" />
+                  <img className="img-fluid" src={Img1} alt="" />
                 </a>
-                <div class="portfolio-caption">
+                <div className="portfolio-caption">
                   <h4>Southwest</h4>
-                  <p class="text-muted">Website Design</p>
+                  <p className="text-muted">Website Design</p>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <i class="fas fa-plus fa-3x"></i>
+              <div className="col-md-4 col-sm-6 portfolio-item">
+                <a className="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                  <div className="portfolio-hover">
+                    <div className="portfolio-hover-content">
+                      <i className="fas fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img class="img-fluid" src={Img1} alt="" />
+                  <img className="img-fluid" src={Img1} alt="" />
                 </a>
-                <div class="portfolio-caption">
+                <div className="portfolio-caption">
                   <h4>Window</h4>
-                  <p class="text-muted">Photography</p>
+                  <p className="text-muted">Photography</p>
                 </div>
               </div>
             </div>
@@ -120,42 +120,42 @@ export default class Home extends React.Component {
 
 
         {/* <!-- Contact --> */}
-        <section class="page-section" id="contact">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Contact Us</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        <section className="page-section" id="contact">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12 text-center">
+                <h2 className="section-heading text-uppercase">Contact Us</h2>
+                <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
-                        <p class="help-block text-danger"></p>
+            <div className="row">
+              <div className="col-lg-12">
+                <form id="contactForm" name="sentMessage" noValidate="novalidate">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input className="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
+                        <p className="help-block text-danger"></p>
                       </div>
-                      <div class="form-group">
-                        <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
-                        <p class="help-block text-danger"></p>
+                      <div className="form-group">
+                        <input className="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+                        <p className="help-block text-danger"></p>
                       </div>
-                      <div class="form-group">
-                        <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
-                        <p class="help-block text-danger"></p>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                        <p class="help-block text-danger"></p>
+                      <div className="form-group">
+                        <input className="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
+                        <p className="help-block text-danger"></p>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="col-lg-12 text-center">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <textarea className="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                        <p className="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div className="clearfix"></div>
+                    <div className="col-lg-12 text-center">
                       <div id="success"></div>
-                      <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                      <button id="sendMessageButton" className="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
                     </div>
                   </div>
                 </form>
@@ -165,38 +165,38 @@ export default class Home extends React.Component {
         </section>
 
         {/* <!-- Footer --> */}
-        <footer class="footer">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-4">
-                <span class="copyright">Copyright &copy; Your Website 2019</span>
+        <footer className="footer">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-md-4">
+                <span className="copyright">Copyright &copy; Your Website 2019</span>
               </div>
-              <div class="col-md-4">
-                <ul class="list-inline social-buttons">
-                  <li class="list-inline-item">
+              <div className="col-md-4">
+                <ul className="list-inline social-buttons">
+                  <li className="list-inline-item">
                     <a href="#">
                       {/* I need link to facebook page and facebook icon  */}
-                      <i class="fab fa-twitter"></i>
+                      <i className="fab fa-twitter"></i>
                     </a>
                   </li>
-                  <li class="list-inline-item">
+                  <li className="list-inline-item">
                     <a href="#">
-                      <i class="fab fa-facebook-f"></i>
+                      <i className="fab fa-facebook-f"></i>
                     </a>
                   </li>
-                  <li class="list-inline-item">
+                  <li className="list-inline-item">
                     <a href="#">
-                      <i class="fab fa-linkedin-in"></i>
+                      <i className="fab fa-linkedin-in"></i>
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="col-md-4">
-                <ul class="list-inline quicklinks">
-                  <li class="list-inline-item">
+              <div className="col-md-4">
+                <ul className="list-inline quicklinks">
+                  <li className="list-inline-item">
                     <a href="#">Privacy Policy</a>
                   </li>
-                  <li class="list-inline-item">
+                  <li className="list-inline-item">
                     <a href="#">Terms of Use</a>
                   </li>
                 </ul>
@@ -207,32 +207,32 @@ export default class Home extends React.Component {
 
         {/* When you click on an image this will load */}
         {/* <!-- Modal 1 --> */}
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                  <div class="rl"></div>
+        <div className="portfolio-modal modal fade" id="portfolioModal1" tabIndex="-1" role="dialog" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="close-modal" data-dismiss="modal">
+                <div className="lr">
+                  <div className="rl"></div>
                 </div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="modal-body">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-8 mx-auto">
+                    <div className="modal-body">
                       {/* <!-- Project Details Go Here --> */}
-                      <h2 class="text-uppercase">Food Name</h2>
-                      <p class="item-intro text-muted">
+                      <h2 className="text-uppercase">Food Name</h2>
+                      <p className="item-intro text-muted">
                         Lorem ipsum dolor sit amet consectetur.
                       </p>
-                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
+                      <img className="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                      <ul class="list-inline">
+                      <ul className="list-inline">
                         <li>Date: January 2017</li>
                         <li>Client: Threads</li>
                         <li>Category: Illustration</li>
                       </ul>
-                      <button class="btn btn-primary" data-dismiss="modal" type="button">
-                        <i class="fas fa-times"></i>
+                      <button className="btn btn-primary" data-dismiss="modal" type="button">
+                        <i className="fas fa-times"></i>
                         Close Project</button>
                     </div>
                   </div>
@@ -243,30 +243,30 @@ export default class Home extends React.Component {
         </div>
 
         {/* <!-- Modal 2 --> */}
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                  <div class="rl"></div>
+        <div className="portfolio-modal modal fade" id="portfolioModal2" tabIndex="-1" role="dialog" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="close-modal" data-dismiss="modal">
+                <div className="lr">
+                  <div className="rl"></div>
                 </div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="modal-body">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-8 mx-auto">
+                    <div className="modal-body">
                       {/* <!-- Project Details Go Here --> */}
-                      <h2 class="text-uppercase">Project Name</h2>
-                      <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
+                      <h2 className="text-uppercase">Project Name</h2>
+                      <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                      <img className="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                      <ul class="list-inline">
+                      <ul className="list-inline">
                         <li>Date: January 2017</li>
                         <li>Client: Explore</li>
                         <li>Category: Graphic Design</li>
                       </ul>
-                      <button class="btn btn-primary" data-dismiss="modal" type="button">
-                        <i class="fas fa-times"></i>
+                      <button className="btn btn-primary" data-dismiss="modal" type="button">
+                        <i className="fas fa-times"></i>
                         Close Project</button>
                     </div>
                   </div>
@@ -277,30 +277,30 @@ export default class Home extends React.Component {
         </div>
 
         {/* <!-- Modal 3 --> */}
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                  <div class="rl"></div>
+        <div className="portfolio-modal modal fade" id="portfolioModal3" tabIndex="-1" role="dialog" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="close-modal" data-dismiss="modal">
+                <div className="lr">
+                  <div className="rl"></div>
                 </div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="modal-body">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-8 mx-auto">
+                    <div className="modal-body">
                       {/* <!-- Project Details Go Here --> */}
-                      <h2 class="text-uppercase">Project Name</h2>
-                      <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
+                      <h2 className="text-uppercase">Project Name</h2>
+                      <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                      <img className="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                      <ul class="list-inline">
+                      <ul className="list-inline">
                         <li>Date: January 2017</li>
                         <li>Client: Finish</li>
                         <li>Category: Identity</li>
                       </ul>
-                      <button class="btn btn-primary" data-dismiss="modal" type="button">
-                        <i class="fas fa-times"></i>
+                      <button className="btn btn-primary" data-dismiss="modal" type="button">
+                        <i className="fas fa-times"></i>
                         Close Project</button>
                     </div>
                   </div>
@@ -311,30 +311,30 @@ export default class Home extends React.Component {
         </div>
 
         {/* <!-- Modal 4 --> */}
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                  <div class="rl"></div>
+        <div className="portfolio-modal modal fade" id="portfolioModal4" tabIndex="-1" role="dialog" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="close-modal" data-dismiss="modal">
+                <div className="lr">
+                  <div className="rl"></div>
                 </div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="modal-body">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-8 mx-auto">
+                    <div className="modal-body">
                       {/* <!-- Project Details Go Here --> */}
-                      <h2 class="text-uppercase">Project Name</h2>
-                      <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
+                      <h2 className="text-uppercase">Project Name</h2>
+                      <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                      <img className="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                      <ul class="list-inline">
+                      <ul className="list-inline">
                         <li>Date: January 2017</li>
                         <li>Client: Lines</li>
                         <li>Category: Branding</li>
                       </ul>
-                      <button class="btn btn-primary" data-dismiss="modal" type="button">
-                        <i class="fas fa-times"></i>
+                      <button className="btn btn-primary" data-dismiss="modal" type="button">
+                        <i className="fas fa-times"></i>
                         Close Project</button>
                     </div>
                   </div>
@@ -345,30 +345,30 @@ export default class Home extends React.Component {
         </div>
 
         {/* <!-- Modal 5 --> */}
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                  <div class="rl"></div>
+        <div className="portfolio-modal modal fade" id="portfolioModal5" tabIndex="-1" role="dialog" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="close-modal" data-dismiss="modal">
+                <div className="lr">
+                  <div className="rl"></div>
                 </div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="modal-body">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-8 mx-auto">
+                    <div className="modal-body">
                       {/* <!-- Project Details Go Here --> */}
-                      <h2 class="text-uppercase">Project Name</h2>
-                      <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
+                      <h2 className="text-uppercase">Project Name</h2>
+                      <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                      <img className="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                      <ul class="list-inline">
+                      <ul className="list-inline">
                         <li>Date: January 2017</li>
                         <li>Client: Southwest</li>
                         <li>Category: Website Design</li>
                       </ul>
-                      <button class="btn btn-primary" data-dismiss="modal" type="button">
-                        <i class="fas fa-times"></i>
+                      <button className="btn btn-primary" data-dismiss="modal" type="button">
+                        <i className="fas fa-times"></i>
                         Close Project</button>
                     </div>
                   </div>
@@ -378,30 +378,30 @@ export default class Home extends React.Component {
           </div>
         </div>
 
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                  <div class="rl"></div>
+        <div className="portfolio-modal modal fade" id="portfolioModal6" tabIndex="-1" role="dialog" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="close-modal" data-dismiss="modal">
+                <div className="lr">
+                  <div className="rl"></div>
                 </div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="modal-body">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-8 mx-auto">
+                    <div className="modal-body">
                       {/* <!-- Project Details Go Here --> */}
-                      <h2 class="text-uppercase">Project Name</h2>
-                      <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src={Img1} alt="" />
+                      <h2 className="text-uppercase">Project Name</h2>
+                      <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                      <img className="img-fluid d-block mx-auto" src={Img1} alt="" />
                       <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                      <ul class="list-inline">
+                      <ul className="list-inline">
                         <li>Date: January 2017</li>
                         <li>Client: Window</li>
                         <li>Category: Photography</li>
                       </ul>
-                      <button class="btn btn-primary" data-dismiss="modal" type="button">
-                        <i class="fas fa-times"></i>
+                      <button className="btn btn-primary" data-dismiss="modal" type="button">
+                        <i className="fas fa-times"></i>
                         Close Project</button>
                     </div>
                   </div>
