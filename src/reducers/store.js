@@ -13,6 +13,7 @@ export const initState = {
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 110,
+      quantity: 0,
       img: Item1
     },
     {
@@ -21,6 +22,7 @@ export const initState = {
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 80,
+      quantity: 0,
       img: Item2
     },
     {
@@ -29,6 +31,7 @@ export const initState = {
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 120,
+      quantity: 0,
       img: Item3
     },
     {
@@ -37,6 +40,7 @@ export const initState = {
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 260,
+      quantity: 0,
       img: Item4
     },
     {
@@ -45,6 +49,7 @@ export const initState = {
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 160,
+      quantity: 0,
       img: Item5
     },
     {
@@ -53,6 +58,7 @@ export const initState = {
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       price: 90,
+      quantity: 0,
       img: Item6
     }
   ],
