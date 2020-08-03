@@ -5,7 +5,7 @@ import {
   removeItem,
   addQuantity,
   subtractQuantity
-} from "../actions/cart_actions";
+} from "../redux/actions/cart_actions";
 
 import Recipe from "./Recipe";
 
@@ -65,14 +65,12 @@ class Cart extends Component {
         </div>
       ))
     ) : (
-        <div className="mt-5 mb-5">
+        <div className="mt-5 ml-5 mb-5">
           <Link to="/shop">YOUR CART IS EMPHTY. ADD MORE ITEMS? </Link>
         </div>
       );
     return (
-      <div>
-        <h5 className="mt-3">YOUR ITEMS:</h5>
-        <hr />
+      <div className="container mt-4">
         {addedItems}
         <hr />
         <Recipe />

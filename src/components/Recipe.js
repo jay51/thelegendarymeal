@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addShipping, subShipping } from "../actions/cart_actions";
+import { addShipping, subShipping } from "../redux/actions/cart_actions";
 import { Elements } from "react-stripe-elements";
 import CheckoutForm from "./CheckoutForm";
 

@@ -1,11 +1,5 @@
-
-/*!
- * Start Bootstrap - Agency v5.2.1 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
- */
-
-body {
+html, body {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
@@ -22,7 +16,7 @@ a:hover {
   color: #fec503;
 }
 
-.text-primary {
+.text-yellow {
   color: #fed136 !important;
 }
 

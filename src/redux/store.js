@@ -5,6 +5,9 @@ import Item4 from "../images/item4.jpg";
 import Item5 from "../images/item5.jpg";
 import Item6 from "../images/item6.jpg";
 
+import { createStore } from "redux";
+import cartReducer from "./cart";
+
 export const initState = {
   items: [
     {
@@ -65,3 +68,4 @@ export const initState = {
   addedItems: [],
   total: 0
 };
+export const store = createStore(cartReducer);

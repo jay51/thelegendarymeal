@@ -30,7 +30,7 @@ class CheckoutForm extends Component {
       console.log(data);
 
       if (response.ok) { this.setState({ complete: true, success: true }); }
-      else { this.setState({ complete: true }) }
+      else { this.setState({ complete: true, success:false }) }
 
     } catch (e) {
       console.log("INVALID CARD NUMBER")
