@@ -3,8 +3,6 @@ import Img1 from "../images/homepage/item1.jpg";
 
 export default class Home extends React.Component {
 
-  constructor(props) { super(props); }
-
   render() {
 
     return (
