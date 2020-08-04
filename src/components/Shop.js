@@ -10,9 +10,11 @@ const mapStateToProps = (state) => {
     addedItems: state.addedItems
   }
 }
-// Adding function to props
+
 const mapDispatchToProps = (dispatch) => {
-  return { addToCart: (id) => { dispatch(addToCart(id)) } }
+  return {
+    addToCart: (id) => dispatch(addToCart(id))
+  }
 }
 
 
@@ -34,7 +36,7 @@ class Shop extends Component {
 
             <h5 className="card-title">{food.title}</h5>
             <p className="card-text">{food.desc}</p>
-            <button className="btn btn-dark m-2" onClick={() => { this.addToCart(food.id) }}>Add</button>
+            <button className="btn btn-dark m-2" onClick={() => this.addToCart(food.id)}>Add</button>
             <a className="portfolio-link ml-2" data-toggle="modal" href={"#" + food.title.replace(/ /g,'')}>
               Details
             </a>
