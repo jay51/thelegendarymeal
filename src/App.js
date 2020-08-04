@@ -15,7 +15,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/shop" component={Shop} />
-            <StripeProvider apiKey="pk_test_6k2KjDMoeLgFqiEOtCA9V9VH00S1u05rkN">
+            <StripeProvider apiKey={process.env.REACT_APP_PUB_KEY}>
               <Route path="/cart" component={Cart} />
             </StripeProvider>
             <Route component={() => <>what the fuck are you looking for ? </>} />

@@ -1,4 +1,4 @@
-const stripe = require("stripe")("sk_test_R3xTlYAL3e77UMVi69WZD6CV00NeHku9IJ");
+const stripe = require("stripe")(process.env.SECRET_KEY);
 
 //const { stripe_sk, email, password} = process.env;
 const products = [

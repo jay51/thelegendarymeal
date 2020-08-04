@@ -20,7 +20,7 @@ class Home extends React.Component {
 
   addToCart = id => {
     this.props.addToCart(id);
-    const itemObj = this.props.items.find(item => item.id == id);
+    const itemObj = this.props.items.find(item => item.id === id);
     if(itemObj)
       NotificationManager.success(`Added ${itemObj.title} to your cart`, "Add To Cart")
   }
