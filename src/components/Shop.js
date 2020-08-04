@@ -38,7 +38,7 @@ class Shop extends Component {
             <a className="portfolio-link ml-2" data-toggle="modal" href={"#" + food.title.replace(/ /g,'')}>
               Details
             </a>
-            <p className="card-text">Price: {food.price}$</p>
+            <p className="card-text">Price: {food.dprice}$</p>
 
           </div>
         </div>
