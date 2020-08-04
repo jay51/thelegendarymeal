@@ -5,13 +5,16 @@ import { Elements } from "react-stripe-elements";
 import CheckoutForm from "./CheckoutForm";
 
 class Recipe extends Component {
-  state = {
-    disabled: true,
-    fName: "",
-    lName: "",
-    email: "",
-    phone: ""
-  };
+  constructor(props){
+    super(props);
+    this.state = {
+      disabled: true,
+      fName: "",
+      lName: "",
+      email: "",
+      phone: ""
+    };
+  }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -116,7 +119,7 @@ class Recipe extends Component {
         <div className="form-check">
           <hr />
           <Elements>
-            <CheckoutForm userData={this.state} />
+            <CheckoutForm userData={this.state} history={this.props.history}/>
           </Elements>
         </div>
       </form>

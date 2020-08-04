@@ -52,11 +52,6 @@ class Shop extends Component {
         <div className="container">
           <div className="row">
             {itemList}
-            <hr />
-            <h2>What the fuck!</h2>
-            {
-              this.props.addedItems.map(item => <div key={item.title}>{item.title}</div>)
-            }
           </div>
            {
               this.props.items.map(food => {
