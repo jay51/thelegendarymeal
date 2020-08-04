@@ -15,9 +15,9 @@ class CheckoutForm extends Component {
     const userData = this.props.userData
     // TODO: remove all added items when purchase or error
     // TODO: do we need item.title? no
-    const items = this.props.items.map(item => ({ id: item.id, title: item.title }));
+    const items = this.props.items.map(item => ({ id: item.id }));
     let { token } = await this.props.stripe.createToken({ name: userData.fName });
-    console.log(token);
+    console.log({ token: token.id, items, userData })
 
     try {
       let response = await fetch("/.netlify/functions/payment", {
