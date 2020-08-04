@@ -2,11 +2,12 @@ import React from "react";
 import { connect } from 'react-redux'
 import { addToCart } from '../redux/actions/cart_actions'
 import ContactForm from "./ContactForm";
+import {NotificationContainer, NotificationManager} from "react-notifications";
 
 const mapStateToProps = (state) => {
   return {
     items: state.items,
-    addedItems: state.addedItems
+    addedItems: state.addedItems.slice(0, 6)
   }
 }
 
@@ -18,12 +19,16 @@ const mapDispatchToProps = (dispatch) => {
 class Home extends React.Component {
 
   addToCart = id => {
-    this.props.addToCart(id)
+    this.props.addToCart(id);
+    const itemObj = this.props.items.find(item => item.id == id);
+    if(itemObj)
+      NotificationManager.success(`Added ${itemObj.title} to your cart`, "Add To Cart")
   }
 
   render() {
     return (
       <React.Fragment>
+        <NotificationContainer />
         <header className="masthead">
           <div className="container">
             <div className="intro-text">

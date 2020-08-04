@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from '../redux/actions/cart_actions'
+import {NotificationContainer, NotificationManager} from "react-notifications";
 
 // Taking items from store
 const mapStateToProps = (state) => {
@@ -17,7 +18,12 @@ const mapDispatchToProps = (dispatch) => {
 
 class Shop extends Component {
 
-  addToCart = (id) => { this.props.addToCart(id); }
+  addToCart = (id) => {
+    this.props.addToCart(id);
+    const itemObj = this.props.items.find(item => item.id == id);
+    if(itemObj)
+      NotificationManager.success(`Added ${itemObj.title} to your cart`, "Add To Cart")
+  }
 
   render() {
     let itemList = this.props.items.map(food =>
@@ -28,7 +34,7 @@ class Shop extends Component {
 
             <h5 className="card-title">{food.title}</h5>
             <p className="card-text">{food.desc}</p>
-            <button className="btn btn-dark m-2" onClick={() => { this.addToCart(food.id) }}>ADD</button>
+            <button className="btn btn-dark m-2" onClick={() => { this.addToCart(food.id) }}>Add</button>
             <a className="portfolio-link ml-2" data-toggle="modal" href={"#" + food.title.replace(/ /g,'')}>
               Details
             </a>
@@ -42,6 +48,7 @@ class Shop extends Component {
 
     return (
       <section className="bg-light page-section" id="services">
+        <NotificationContainer />
         <div className="container">
           <div className="row">
             {itemList}
