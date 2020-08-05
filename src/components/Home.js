@@ -12,7 +12,9 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return { addToCart: (id) => { dispatch(addToCart(id)) } }
+  return {
+    addToCart: (id) => dispatch(addToCart(id))
+  }
 }
 
 
@@ -143,7 +145,7 @@ class Home extends React.Component {
                             {/* <!-- Project Details Go Here --> */}
                             <h2 className="text-uppercase">{food.title}</h2>
                             <p className="item-intro text-muted">
-                              Category: Not Know yet
+                              {food.dprice}, Category: Not Know yet
                             </p>
                             <img className="img-fluid d-block mx-auto" src={food.img} alt="" />
                             <p>{food.dec}</p>

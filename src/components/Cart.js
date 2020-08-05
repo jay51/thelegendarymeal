@@ -1,13 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import Recipe from "./Recipe";
 import {
   removeItem,
   addQuantity,
   subtractQuantity
 } from "../redux/actions/cart_actions";
 
-import Recipe from "./Recipe";
 
 function Cart(props) {
   const handleRemove = id => props.removeItem(id);

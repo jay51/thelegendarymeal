@@ -1,5 +1,4 @@
 const stripe = require("stripe")(process.env.SECRET_KEY);
-// import { items as products  } from "../static/items";
 //const { stripe_sk, email, password} = process.env;
 
 const products = [

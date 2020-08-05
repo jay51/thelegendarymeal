@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { addToCart } from '../redux/actions/cart_actions'
 import {NotificationContainer, NotificationManager} from "react-notifications";
 
-// Taking items from store
 const mapStateToProps = (state) => {
   return {
     items: state.items,

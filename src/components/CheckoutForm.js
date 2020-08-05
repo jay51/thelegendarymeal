@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { CardElement, injectStripe } from "react-stripe-elements";
+import { removeAllItems } from '../redux/actions/cart_actions'
 import { connect } from "react-redux";
 import {NotificationContainer, NotificationManager} from "react-notifications";
 
@@ -31,6 +32,7 @@ class CheckoutForm extends Component {
 
       if (response.ok) {
         this.setState({ complete: true, success: true });
+        this.props.removeAllItems();
 
         NotificationManager.success(`Successfully submitted!`, "PURCHASE")
         setTimeout(()=> {
@@ -71,4 +73,10 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(injectStripe(CheckoutForm));
+const mapDispatchToProps = dispatch => {
+  return {
+    removeAllItems: () => dispatch(removeAllItems())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(injectStripe(CheckoutForm));

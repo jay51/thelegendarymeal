@@ -4,7 +4,8 @@ import {
   SUB_QUANTITY,
   ADD_QUANTITY,
   ADD_SHIPPING,
-  SUB_SHIPPING
+  SUB_SHIPPING,
+  REMOVE_ALL,
 } from "./actions/action_types";
 import { initState } from "./store";
 
@@ -61,6 +62,10 @@ const cartReducer = (state = initState, action) => {
       let newTotal = state.total - addedItem.price;
       return { ...state, addedItems: [...state.addedItems], total: newTotal };
     }
+
+    case REMOVE_ALL:
+      console.log(REMOVE_ALL)
+      return { ...state, addedItems: [], total: 0 }
 
     case ADD_SHIPPING:
       console.log(ADD_SHIPPING)
