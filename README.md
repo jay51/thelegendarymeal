@@ -109,10 +109,11 @@ For a full demo of routing and authentication, check this branch: https://github
 
 
 ## TODO:
-- [ ] Add quantity to the products instead of adding to the price 
-- [ ] Designe the home page
-- [ ] Refactore the checkout component
-- [ ] Fix netlify routing 
-- [ ] Upload keys
-- [ ] Optimize images
+- [x] Add quantity to the products instead of adding to the price 
+- [x] Designe the home page
+- [x] Refactore the checkout component
+- [x] Fix netlify routing 
+- [x] Upload keys
+- [x] Optimize images
 - [ ] Create lambda function to handle contact form or use netlify contact form
+- [ ] send email on checkout
