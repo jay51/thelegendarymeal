@@ -53,7 +53,16 @@ export function handler(event, context, callback) {
 
   try {
     let { items, token, userData } = JSON.parse(event.body);
-    let itemsToBuy = products.filter(item => items.find(prod => prod.id === item.id));
+    let itemsToBuy = [];
+    items.forEach(item => {
+        let foundItem = products.find(prod => prod.id == item.id)
+        if(foundItem){
+            foundItem.quantity = item.quantity;
+            itemsToBuy.push(foundItem);
+        }
+    });
+
+    // TODO: quantity should be considerd when calculating the total price
     let amount = itemsToBuy.reduce((i, item) => i + item.price, 0);
 
     console.log(itemsToBuy);

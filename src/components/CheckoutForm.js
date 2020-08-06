@@ -5,54 +5,49 @@ import { connect } from "react-redux";
 import {NotificationContainer, NotificationManager} from "react-notifications";
 
 class CheckoutForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { complete: false, success: false };
-  }
 
   submit = async (e) => {
     e.preventDefault();
 
     const userData = this.props.userData
-    // TODO: remove all added items when purchase or error
-    // TODO: do we need item.title? no
-    const items = this.props.items.map(item => ({ id: item.id }));
+    const items = this.props.items.map(item => ({ id: item.id, quantity: item.quantity }));
     let { token } = await this.props.stripe.createToken({ name: userData.fName });
-    console.log({ token: token.id, items, userData })
 
     try {
-      let response = await fetch("/.netlify/functions/payment", {
-        method: "POST",
-        headers: { "Content-Type": "text/plain" },
-        body: JSON.stringify({ token: token.id, items, userData })
-      });
+        console.log({ token: token.id, items, userData })
+        let response = await fetch("/.netlify/functions/payment", {
+            method: "POST",
+            headers: { "Content-Type": "text/plain" },
+            body: JSON.stringify({ token: token.id, items, userData })
+        });
 
-      let data = await response.json();
-      console.log(data);
+        let data = await response.json();
+        console.log(data);
 
-      if (response.ok) {
-        this.setState({ complete: true, success: true });
-        this.props.removeAllItems();
+        if (response.ok) {
+            this.props.removeAllItems();
+            NotificationManager.success(`Successfully submitted!`, "PURCHASE")
 
-        NotificationManager.success(`Successfully submitted!`, "PURCHASE")
-        setTimeout(()=> {
-          this.props.history.push("/");
-        }, 5000)
-      }
-      else { this.setState({ complete: true, success:false }) }
+            setTimeout(()=> {
+                this.props.history.push("/");
+            }, 5000)
+        }
+        else {
+            console.log("GOT Error:", e);
+            NotificationManager.error(`Something went wrong!`, "Error")
+        }
 
     } catch (e) {
-      console.log("GOT Error:", e);
-      NotificationManager.error(`Something went wrong!`, "Error")
-      setTimeout(()=> {
-        this.props.history.push("/");
-      }, 5000)
+        console.log("GOT Error:", e);
+        NotificationManager.error(`Something went wrong!`, "Error")
+        setTimeout(()=> {
+            this.props.history.push("/");
+        }, 5000)
     }
   }
 
 
   render() {
-
     return (
       <div className="checkout mt-4 mb-5">
         <NotificationContainer />
